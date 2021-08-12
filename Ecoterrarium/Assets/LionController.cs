@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ChickenController : MonoBehaviour
+public class LionController : MonoBehaviour
 {
 
     public NavMeshAgent agent;
@@ -14,7 +14,6 @@ public class ChickenController : MonoBehaviour
 
     System.DateTime ultimoNuevoDestino = System.DateTime.Now.AddSeconds(-3);
 
-    // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -35,11 +34,8 @@ public class ChickenController : MonoBehaviour
             ultimoNuevoDestino = System.DateTime.Now;
         }
     }
-
-    // Update is called once per frame
     void Update()
     {
-        //Debug.Log(agent.velocity.magnitude);
         if (agent.velocity.magnitude > 0.2 && agent.velocity != Vector3.zero)
         {
             anim.SetInteger("Walk", 1);
@@ -47,7 +43,7 @@ public class ChickenController : MonoBehaviour
         else
         {
             anim.SetInteger("Walk", 0);
-            NuevoDestino();           
+            NuevoDestino();
         }
 
         if (log)
