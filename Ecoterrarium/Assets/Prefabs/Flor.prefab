@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2258960371050396710}
   - component: {fileID: 2268440614101109318}
   m_Layer: 0
-  m_Name: SNature_LiliBlossom (1)
+  m_Name: Flor
   m_TagString: Comida
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

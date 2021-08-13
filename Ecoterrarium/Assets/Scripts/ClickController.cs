@@ -4,21 +4,19 @@ public class ClickController : MonoBehaviour
 {
     public Camera cam;
     public Transform parent;
-    public Transform izq;
-    public Transform cen;
-    public Transform der;
+    public Transform clickIzquierdo;
+    public Transform clickCentral;
+    public Transform clickDerecho;
 
     bool estadoIzq = false;
     bool estadoCen = false;
     bool estadoDer = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         bool nuevoEstadoIzq = Input.GetMouseButton(0);
@@ -31,7 +29,7 @@ public class ClickController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                Transform gallina = Instantiate(izq, hit.point, Quaternion.identity);
+                Transform gallina = Instantiate(clickIzquierdo, hit.point, Quaternion.identity);
                 gallina.parent = parent;
             }
         }
@@ -42,7 +40,7 @@ public class ClickController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                Transform gallina = Instantiate(cen, hit.point, Quaternion.identity);
+                Transform gallina = Instantiate(clickCentral, hit.point, Quaternion.identity);
                 gallina.parent = parent;
             }
         }
@@ -53,7 +51,7 @@ public class ClickController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                Transform gallina = Instantiate(der, hit.point, Quaternion.identity);
+                Transform gallina = Instantiate(clickDerecho, hit.point, Quaternion.identity);
                 gallina.parent = parent;
             }
         }

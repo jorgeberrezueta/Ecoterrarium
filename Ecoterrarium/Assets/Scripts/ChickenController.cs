@@ -7,7 +7,7 @@ public class ChickenController : MonoBehaviour
     public NavMeshAgent agent;
     public bool log = false;
 
-    public float walkRadius = 20;
+    public float radioDePathfinding = 20;
     public float distanciaMaximaComida = 5;
     [Range(0.0f,10.0f)]
     public float tiempoEnComer = 5;
@@ -30,10 +30,10 @@ public class ChickenController : MonoBehaviour
     {
         if (MilisegundosDesde(ultimoNuevoDestino) > 1000)
         {
-            Vector3 randomDirection = Random.insideUnitSphere * walkRadius;
+            Vector3 randomDirection = Random.insideUnitSphere * radioDePathfinding;
             randomDirection += transform.position;
             NavMeshHit hit;
-            NavMesh.SamplePosition(randomDirection, out hit, walkRadius, 1);
+            NavMesh.SamplePosition(randomDirection, out hit, radioDePathfinding, 1);
             Vector3 finalPosition = hit.position;
             agent.SetDestination(finalPosition);
             ultimoNuevoDestino = System.DateTime.Now;
