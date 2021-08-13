@@ -59,7 +59,7 @@ public class LionController : MonoBehaviour
                     {
                         Destroy(obj);
                         comiendoDesde = System.DateTime.Now;
-                        //lleno = true;
+                        lleno = true;
                     }
                 }
             }

@@ -59,7 +59,7 @@ public class ChickenController : MonoBehaviour
                     {
                         Destroy(obj);
                         comiendoDesde = System.DateTime.Now;
-                        //lleno = true;
+                        lleno = true;
                     }
                 }
             }
