@@ -7,6 +7,8 @@ TagManager:
   - Terrain
   - Obstaculo
   - Comida
+  - Gallina
+  - Pared
   layers:
   - Default
   - TransparentFX

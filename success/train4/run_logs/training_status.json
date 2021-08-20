@@ -1,0 +1,29 @@
+{
+    "Gallina": {
+        "checkpoints": [
+            {
+                "steps": 377808,
+                "file_path": "results\\train4\\Gallina\\Gallina-377808.onnx",
+                "reward": null,
+                "creation_time": 1629434918.7906811,
+                "auxillary_file_paths": [
+                    "results\\train4\\Gallina\\Gallina-377808.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 377808,
+            "file_path": "results\\train4\\Gallina.onnx",
+            "reward": null,
+            "creation_time": 1629434918.7906811,
+            "auxillary_file_paths": [
+                "results\\train4\\Gallina\\Gallina-377808.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.9.0+cpu"
+    }
+}
