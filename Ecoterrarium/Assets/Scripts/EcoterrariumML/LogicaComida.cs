@@ -5,8 +5,12 @@ public class LogicaComida : MonoBehaviour
     public bool reaparecer;
     public AreaAnimales area;
 
-    public void OnEaten()
+    public void OnEaten(AreaAnimales areaAnimales)
     {
+        if (area == null)
+        {
+            area = areaAnimales;
+        }
         if (reaparecer)
         {
             transform.position = new Vector3(Random.Range(-area.rango, area.rango),

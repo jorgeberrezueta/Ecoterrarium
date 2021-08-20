@@ -107,7 +107,7 @@ public class AgenteGallina : Agent
         if (other.gameObject.TryGetComponent(out LogicaComida comida))
         {
             //Debug.Log("Colision comida");
-            other.gameObject.GetComponent<LogicaComida>().OnEaten();
+            other.gameObject.GetComponent<LogicaComida>().OnEaten(areaAnimales);
             AddReward(1f);
         }
         /*if (collision.gameObject.TryGetComponent(out Pared pared))

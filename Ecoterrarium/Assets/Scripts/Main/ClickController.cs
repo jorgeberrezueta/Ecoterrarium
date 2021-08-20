@@ -27,7 +27,7 @@ public class ClickController : MonoBehaviour
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit))
+            if (clickIzquierdo != null && Physics.Raycast(ray, out hit))
             {
                 Transform gallina = Instantiate(clickIzquierdo, hit.point, Quaternion.identity);
                 gallina.parent = parent;
@@ -38,7 +38,7 @@ public class ClickController : MonoBehaviour
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit))
+            if (clickCentral != null && Physics.Raycast(ray, out hit))
             {
                 Transform gallina = Instantiate(clickCentral, hit.point, Quaternion.identity);
                 gallina.parent = parent;
@@ -49,7 +49,7 @@ public class ClickController : MonoBehaviour
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit))
+            if (clickDerecho != null && Physics.Raycast(ray, out hit))
             {
                 Transform gallina = Instantiate(clickDerecho, hit.point, Quaternion.identity);
                 gallina.parent = parent;
